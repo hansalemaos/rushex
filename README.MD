@@ -4,6 +4,8 @@ Uses https://github.com/BurntSushi/ripgrep and parses the regular expression out
 It is much faster than the first version: https://github.com/hansalemaos/PYRipGREP due to more efficient parsing, and substitution is 
 also supported (BACK UP YOUR DATA BEFORE!). Check out the examples 
 
+### Tested against Windows 10 / Python 3.10 / Anaconda 
+
 
 ## pip install rushex
 
@@ -121,8 +123,8 @@ df6 = monsterregex.find_all_in_folders(
 # Get a DataFrame
 df7 = monsterregex.find_all_in_folders(
     folders=[r"C:\grepte\homepagesavetest13", r"C:\grepte\homepagesavetest14"],
-    regular_expressions=[r"der|die|das"], # Pass only one regular expression when you want to edit files!!!
-    allowed_extensions=(".txt", ".html"),
+    regular_expressions=[r"der|die|das"], # Pass only one regular expression when you want to edit files!!! More than one might corrupt your data!
+    allowed_extensions=(".txt", ".html"), 
     ignore_case=True,
     maxsubfolders=-1,
     binary=True,
