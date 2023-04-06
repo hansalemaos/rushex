@@ -121,7 +121,7 @@ df6 = monsterregex.find_all_in_folders(
 # Get a DataFrame
 df7 = monsterregex.find_all_in_folders(
     folders=[r"C:\grepte\homepagesavetest13", r"C:\grepte\homepagesavetest14"],
-    regular_expressions=[r"der|die|das"],
+    regular_expressions=[r"der|die|das"], # Pass only one regular expression when you want to edit files!!!
     allowed_extensions=(".txt", ".html"),
     ignore_case=True,
     maxsubfolders=-1,
